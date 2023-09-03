@@ -1,5 +1,6 @@
 package Maths.Maths2;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class _06_Factors_of_a_number {
@@ -50,6 +51,7 @@ public class _06_Factors_of_a_number {
             for (int j = 0; j <list.size() ; j++) {
                 System.out.print(list.get(list.size()-1-j)+" ");
             }
+
     }
 
 }
