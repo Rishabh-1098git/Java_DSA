@@ -1,14 +1,8 @@
 package Arrays.Arrays_Basic;
 
-import java.util.Arrays;
-import java.util.*;
-
 public class Rough {
     public static void main(String[] args) {
-        String name = "alex";
-        String typed = "aallex";
-//        name.
-        System.out.println(isLongPressedName(name,typed));
+        System.out.println(1^2);
     }
     static int countChars(String str, char ch){
         int n=str.length();
