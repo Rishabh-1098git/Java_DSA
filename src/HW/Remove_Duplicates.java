@@ -6,7 +6,7 @@ public class Remove_Duplicates {
     public static void main(String[] args) {
         // Input: nums = [0,0,1,1,1,2,2,3,3,4]
         // Output: 5, nums = [0,1,2,3,4]
-        int [] arr = {1,2,3,4,4,6,11,12};
+        int [] arr = {0,0,1,1,1,2,2,3,3,4};
         int [] ans = removeDuplicates(arr);
         System.out.println(ans.length+", nums: "+Arrays.toString(ans));
     }

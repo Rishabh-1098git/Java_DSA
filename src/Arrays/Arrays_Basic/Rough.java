@@ -2,31 +2,25 @@ package Arrays.Arrays_Basic;
 
 public class Rough {
     public static void main(String[] args) {
-        System.out.println(1^2);
+        int n = 19;
+        System.out.println(HappyNumber(n));
     }
-    static int countChars(String str, char ch){
-        int n=str.length();
-        int i=0;
-        int count =0;
-        while(i<n){
-            if(ch==str.charAt(i)){
-                count++;
+    static boolean HappyNumber(int n){
+        int num = n;
+        int sum = num;
+        int t;
+        while(sum/10!=0){
+            while(n!=0){
+                t = n%10;
+                sum+=Math.pow(t,2);
+                n/=10;
             }
-            i++;
-        }
-        return count;
-    }
 
-    static boolean isLongPressedName(String name, String typed){
-        int l=typed.length();
-        int i=0;
-        while(i<l){
-            if(countChars(name,typed.charAt(i))>countChars(typed,typed.charAt(i))){
-                return false;
+            if(sum==0){
+                return true;
             }
-            i++;
         }
-        return true;
+        return false;
     }
 
 }
