@@ -2,7 +2,7 @@ package Maths.Maths2;
 
 public class _03_Sieve_Method {
     public static void main(String[] args) {
-        int n = 100;
+        int n = 10;
         boolean [] primes = new boolean[n+1];
         sieve(n,primes);
     }
