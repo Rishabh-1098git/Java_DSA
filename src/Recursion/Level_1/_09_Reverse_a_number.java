@@ -1,6 +1,6 @@
 package Recursion.Level_1;
 public class _09_Reverse_a_number {
-    // Mehtod --> 1
+    // Method --> 1
     static int reverseSum=0;
     static void  reverse(int n){
         if(n == 0){
@@ -10,6 +10,7 @@ public class _09_Reverse_a_number {
         reverseSum = reverseSum*10+rem;
         reverse(n/10);
     }
+
     // Method --> 2
     static int reverse2(int n){
         if(n==0){
