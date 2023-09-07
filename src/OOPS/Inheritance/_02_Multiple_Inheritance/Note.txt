@@ -1,0 +1,3 @@
+## Java doesn't support multiple inheritance due the ambiguity,
+   we can implement multiple inheritance in java using interfaces which we will
+   study ahead.....

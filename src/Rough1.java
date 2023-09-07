@@ -1,20 +1,30 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Rough1 {
     public static void main(String[] args) {
-        // the kth factor ==> Brute Force
-        int n =7;
-        int k=2;
-        System.out.println(get_Kth_factor(7,2));
+        int [] nums = {1,2,3,4};
+        System.out.println(Arrays.toString(productExceptSelf(nums)));
+//        System.out.println(Arrays.toString(nums));
     }
-    static int get_Kth_factor(int n, int k){
-        int count=0;
-        for (int i =1; i<=n ; i++) {
-            if((n%i)==0){
-                count++;
-                if(count==k){
-                    return i;
-                }
-            }
+    public static int[] productExceptSelf(int[] nums) {
+        int [] left = new int[nums.length];
+        int [] right = new int[nums.length];
+        int [] ans = new int[nums.length];
+        left[0]=1;
+        right[nums.length-1]=1;
+        for(int i=1;i<nums.length;i++){
+            left[i] = left[i-1]*nums[i-1];
         }
-        return -1;
+        System.out.println(Arrays.toString(left));
+        for(int i=nums.length-1;i>0;i--){
+            right[i-1] = right[i]*nums[i];
+        }
+        System.out.println(Arrays.toString(right));
+        for(int i=0;i<nums.length;i++){
+            ans[i] = left[i]*right[i];
+        }
+        return ans;
     }
 }
+
