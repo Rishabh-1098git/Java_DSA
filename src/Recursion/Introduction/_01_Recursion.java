@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Introduction;
 public class _01_Recursion {
     public static void main(String[] args) {
         // Print Hello World 5 times

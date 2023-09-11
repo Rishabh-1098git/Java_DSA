@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Introduction;
 public class Binary_Search_Recursion {
     public static void main(String[] args) {
         int [] arr = {1,4,12,23,34,45,56,67};

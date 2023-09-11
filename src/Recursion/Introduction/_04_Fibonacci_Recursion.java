@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Introduction;
 import java.util.Scanner;
 public class _04_Fibonacci_Recursion {
     public static void main(String[] args) {
