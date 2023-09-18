@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 public class _01_CombinationalSum {
     public static void main(String[] args) {
+        int[] arr = {2,3,4};
 
     }
 
-    static List<List<Integer>> subsets(List<Integer>arr){
-        List<List<Integer>> list = new ArrayList<>();
-        if(arr.size()==0){
-            return list;
+
+    static int sum(List<Integer> list){
+        int s = 0;
+        for (int i = 0; i < list.size() ; i++) {
+            s+=list.get(i);
         }
-
-
-
+        return s;
     }
 }
