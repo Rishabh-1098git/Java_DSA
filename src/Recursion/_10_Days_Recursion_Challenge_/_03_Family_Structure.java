@@ -2,32 +2,27 @@ package Recursion._10_Days_Recursion_Challenge_;
 
 public class _03_Family_Structure {
     public static void main(String[] args) {
-        kthChild(3,4,1,1,true,child);
-        System.out.println(child);
+        System.out.println(kthChildNthGeneration(3,4));
     }
-    static String child ;
-    static void kthChild(int n, int k, int gen, int count,boolean flag,String child){
-            if(gen==n && count==k-2){
-                if(flag){
-                    child = "Male";
-                }
-                else{
-                    child = "Female";
-                }
-                return;
-            }
-            if (gen==n && count!=k){
-                return;
-            }
+    public static String kthChildNthGeneration(int n, long k) {
+        if(n==1 || k==1){
+            return "Male";
+        }
 
-            if (flag){
-                kthChild(n,k,gen+1,count,true,child);
-                kthChild(n,k,gen+1,count+1,false,child);
-            }
-            else {
-                kthChild(n,k,gen+1,count,false,child);
-                kthChild(n,k,gen+1,count+1,true,child);
-            }
+        long par = (k+1)/2;
 
+        String parGender = kthChildNthGeneration(n-1, par);
+
+        if(2*par-k == 1){
+            return parGender;
+        }
+        else{
+            if(parGender.equals("Male")){
+                return "Female";
+            }
+            else{
+                return "Male";
+            }
+        }
     }
 }
