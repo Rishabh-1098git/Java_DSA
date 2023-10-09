@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         LL list = new LL();
         for (int i = 1; i <= 10; i++) {
