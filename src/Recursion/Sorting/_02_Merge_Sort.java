@@ -29,7 +29,7 @@ public class _02_Merge_Sort {
         int j=mid;
         int k=0;
 
-        while(i< mid && j< e){
+        while(i<mid && j<e){
             if(arr[i]>arr[j]){
                 mix[k] = arr[j];
                 j++;
