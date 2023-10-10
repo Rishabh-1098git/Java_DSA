@@ -1,5 +1,7 @@
 package LinkedList;
 
+
+
 public class LL {
     private Node head;
     private Node tail;
@@ -44,6 +46,19 @@ public class LL {
         Node newnode = new Node(val,temp.next);
         temp.next = newnode;
         size++;
+    }
+
+    public void insertRec(int val, int index){
+        head = insertRec1(val, index,head);
+    }
+    private Node insertRec1(int val, int index, Node node){
+        if(index==0){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+        node.next = insertRec1(val,index-1,node.next);
+        return node;
     }
 
     public int deleteFirst(){
@@ -121,5 +136,37 @@ public class LL {
             this.value = value;
             this.next = next;
         }
+    }
+
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(2);
+        list.insertLast(3);
+        list.insertLast(3);
+        list.insertLast(3);
+        list.insertLast(4);
+        list.display();
+        list.removeDuplicates();
+        list.display();
+    }
+
+    // Question-2 ==> Remove Duplicates
+    public void removeDuplicates(){
+        Node temp = head;
+        while(temp.next != null){
+            if(temp.value == temp.next.value){
+                temp.next = temp.next.next;
+                size--;
+            }
+            else {
+                temp = temp.next;
+            }
+        }
+        tail = temp;
+        tail.next = null;
     }
 }
