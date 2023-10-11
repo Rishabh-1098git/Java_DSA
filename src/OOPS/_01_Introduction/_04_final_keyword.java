@@ -5,6 +5,7 @@ public class _04_final_keyword {
 //        a=34; // cannot change the value of primitive type
         final A firstobj = new A("Rishabh");
         firstobj.name = "David Jones";
+
         // when a non primitive is final,you cannot reassign it
 //        firstobj = new A("Chandan");
     }

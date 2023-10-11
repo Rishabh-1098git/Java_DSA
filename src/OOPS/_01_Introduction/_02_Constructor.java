@@ -2,7 +2,7 @@ package OOPS._01_Introduction;
 
 public class _02_Constructor {
     public static void main(String[] args) {
-        // creating a object ==>
+        // creating an object ==>
 //        Employee e1 = new Employee(); // constructor is called automatically
 //        e1.display_info();
 

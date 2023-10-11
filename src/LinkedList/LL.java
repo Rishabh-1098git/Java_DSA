@@ -3,7 +3,7 @@ package LinkedList;
 
 
 public class LL {
-    private Node head;
+    public Node head;
     private Node tail;
     private int size;
 
@@ -125,9 +125,9 @@ public class LL {
         return null;
     }
 
-    private class Node{
-        private int value;
-        private Node next;
+    public class Node{
+        public int value;
+        public Node next;
 
         public Node(int value) {
             this.value = value;
@@ -139,19 +139,19 @@ public class LL {
     }
 
     public static void main(String[] args) {
-        LL list = new LL();
-        list.insertLast(1);
-        list.insertLast(1);
-        list.insertLast(1);
-        list.insertLast(2);
-        list.insertLast(2);
-        list.insertLast(3);
-        list.insertLast(3);
-        list.insertLast(3);
-        list.insertLast(4);
-        list.display();
-        list.removeDuplicates();
-        list.display();
+        LL list1 = new LL();
+        list1.insertLast(1);
+        list1.insertLast(2);
+        list1.insertLast(4);
+
+        LL list2 = new LL();
+        list2.insertLast(1);
+        list2.insertLast(3);
+        list2.insertLast(4);
+
+        LL ans = merge(list1, list2);
+        ans.display();
+
     }
 
     // Question-2 ==> Remove Duplicates
@@ -168,5 +168,32 @@ public class LL {
         }
         tail = temp;
         tail.next = null;
+    }
+
+    // Question 3 ==>
+    public static LL merge(LL list1, LL list2){
+        Node head1 = list1.head;
+        Node head2 = list2.head;
+        LL ans = new LL();
+        while(head1 != null && head2 != null){
+            if(head1.value > head2.value){
+                ans.insertLast(head2.value);
+                head2 = head2.next;
+            }
+            else{
+                ans.insertLast(head1.value);
+                head1 = head1.next;
+            }
+        }
+        while (head1 != null){
+            ans.insertLast(head1.value);
+            head1 = head1.next;
+        }
+        while (head2 != null){
+            ans.insertLast(head2.value);
+            head2 = head2.next;
+        }
+
+       return ans;
     }
 }
