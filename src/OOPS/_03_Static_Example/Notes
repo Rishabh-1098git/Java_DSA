@@ -2,7 +2,7 @@ Understanding static:
 
 When a member is declared static, it can be accessed before any objects of its class are created,
 and without reference to any object. You can declare both methods and variables to be static.
-The most common example of a static member is main( ).
+The most common example of a static member is main().
 main( ) is declared as static because it must be called before any objects exist.
 Static method in Java is a method which belongs to the class and not to the object.
 

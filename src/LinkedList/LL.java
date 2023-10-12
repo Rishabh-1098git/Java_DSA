@@ -196,4 +196,10 @@ public class LL {
 
        return ans;
     }
+
+    // Question-4 ==> LinkedList Cycle
+
+//    public static boolean isCycle(LL list){
+//
+//    }
 }
