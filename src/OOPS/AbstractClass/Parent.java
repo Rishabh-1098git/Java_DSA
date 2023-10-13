@@ -20,7 +20,6 @@ public abstract class Parent {
     static void greetings(){
         System.out.println("Hello!!!");
     }
-
     abstract void career(String name);
     abstract void partner(String name);
 }
