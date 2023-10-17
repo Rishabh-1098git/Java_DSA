@@ -4,7 +4,7 @@ package LinkedList;
 
 public class LL {
     public Node head;
-    private Node tail;
+    public Node tail;
     private int size;
 
     public LL() {
@@ -98,7 +98,7 @@ public class LL {
         return val;
     }
 
-    private Node get(int index){
+    public Node get(int index){
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
@@ -125,7 +125,7 @@ public class LL {
         return null;
     }
 
-    public class Node{
+    public static class Node{
         public int value;
         public Node next;
 

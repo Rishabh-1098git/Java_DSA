@@ -1,7 +1,6 @@
 package LinkedList.Problems;
 
 public class _08_MergeSort {
-
     static ListNode sortList (ListNode head){
         if(head==null || head.next==null){
             return head;
