@@ -19,11 +19,11 @@ public class _06_isCousins {
 
         return (level(root,xx,0)==level(root,yy,0) && !isSiblings(root,xx,yy));
     }
-    public TreeNode findNode(TreeNode root, TreeNode node){
+    public TreeNode findNode(TreeNode root, int node){
         if(root == null){
             return null;
         }
-        if(root == node){
+        if(root.val == node){
             return root;
         }
 
