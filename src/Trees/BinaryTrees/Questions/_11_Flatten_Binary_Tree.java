@@ -13,7 +13,7 @@ public class _11_Flatten_Binary_Tree {
           this.right = right;
       }
   }
-    public void flatten(TreeNode root) {
+    public void flatten(TreeNode root) { 
         TreeNode currentNode = root;
 
         while(currentNode != null){
