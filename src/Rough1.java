@@ -4,10 +4,49 @@ public class Rough1 {
     static int minLength = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
-        int[] nums = {1,4,3,1};
-        minimumArrayLength(nums);
+        int[] arr = {1,2,3,4};
+        System.out.println(difference(0, arr));
 
-        System.out.println(minLength);
+    }
+
+    public static int difference(int k , int arr[]){
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            int min1 = Integer.MAX_VALUE;
+            int max1 = Integer.MIN_VALUE;
+
+            for (int j = 0; j < arr.length; j++) {
+                if(j<i ||  j>(i+k-1)){
+                    min1 = Math.min(min1 , arr[j]);
+                    max1 = Math.max(max1, arr[j]);
+                }
+            }
+            min = Math.min(min, Math.abs(min1-max1));
+
+        }
+        return min;
+    }
+    public static long maximizeSum(int n, int[] arr){
+        int max = Integer.MIN_VALUE;
+        int index = 0;
+
+        for (int i=0; i<arr.length; i++) {
+            if(arr[i]>max){
+                max = arr[i];
+                index = i;
+            }
+
+        }
+        for (int i = 0; i < index; i++) {
+            arr[i] = max;
+        }
+
+        long sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
 
     }
     public static int minimumCost(int[] nums) {

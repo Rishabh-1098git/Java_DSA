@@ -54,4 +54,29 @@ public class Pr_02_Max_SubArray {
         System.out.println(sum);
     }
 
+    public long maximumSubarraySum(int[] arr, int k) {
+        long sum=0;
+        long max1=Integer.MIN_VALUE;
+        int n = arr.length;
+        boolean flag = false;
+        for (int i = 0; i <n ; i++) {
+            sum=0;
+            for (int j = i; j <n ; j++) {
+                sum+=arr[j];
+                if(Math.abs(arr[i]-arr[j])==k){
+                    flag = true;
+                    max1 = Math.max(sum,max1);
+                }
+            }
+        }
+        if(flag){
+            return max1;
+        }
+        else{
+            return 0;
+        }
+
+
+    }
+
 }
